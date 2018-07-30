@@ -4,7 +4,7 @@ import { KitNavigationItem } from '@kit/types';
 @Component({
   selector: 'app-vertical-item',
   templateUrl: './vertical-item.component.html',
-  styleUrls: ['./vertical-item.component.css']
+  styleUrls: ['./vertical-item.component.scss']
 })
 export class VerticalItemComponent implements OnInit {
   @HostBinding('class')
