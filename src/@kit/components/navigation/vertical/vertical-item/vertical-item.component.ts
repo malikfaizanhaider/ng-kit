@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostBinding, Input, OnInit} from '@angular/core';
+import { KitNavigationItem } from '@kit/types';
 
 @Component({
   selector: 'app-vertical-item',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./vertical-item.component.css']
 })
 export class VerticalItemComponent implements OnInit {
+  @HostBinding('class')
+  classes = 'nav-item';
+
+  @Input()
+  item: KitNavigationItem;
 
   constructor() { }
 

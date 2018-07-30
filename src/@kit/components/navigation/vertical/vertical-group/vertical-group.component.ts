@@ -4,7 +4,7 @@ import { KitNavigationItem } from '@kit/types';
 @Component({
   selector: 'app-vertical-group',
   templateUrl: './vertical-group.component.html',
-  styleUrls: ['./vertical-group.component.css']
+  styleUrls: ['./vertical-group.component.scss']
 })
 export class VerticalGroupComponent {
   @HostBinding('class')
