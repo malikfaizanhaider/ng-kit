@@ -1,3 +1,11 @@
-<p>
-  navigation works!
-</p>
+<div class="nav" [ngClass]="{'horizontal':layout === 'horizontal', 'vertical':layout === 'vertical'}">
+
+  <!-- Vertical Navigation Layout -->
+  <ng-container *ngIf="layout === 'vertical'">
+    <ng-container *ngFor="let item of navigation">
+      <app-vertical-group></app-vertical-group>
+      <app-vertical-collapsable></app-vertical-collapsable>
+      <app-vertical-item></app-vertical-item>
+    </ng-container>
+  </ng-container>
+</div>
