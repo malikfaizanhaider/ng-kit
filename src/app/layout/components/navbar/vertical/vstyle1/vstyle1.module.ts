@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { MatButtonModule, MatIconModule } from '@angular/material';
+import { NavigationModule } from '@kit/components';
+import { SharedModule } from '@kit/shared.module';
+
+import { Vstyle1Component} from './vstyle1.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    MatButtonModule,
+    MatIconModule,
+    NavigationModule,
+    SharedModule
   ],
-  declarations: []
+  exports: [
+    Vstyle1Component
+  ],
+  declarations: [
+    Vstyle1Component
+  ]
 })
 export class Vstyle1Module { }
