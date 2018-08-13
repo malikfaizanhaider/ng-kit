@@ -6,7 +6,7 @@ import {ConfigService} from '@kit/services/config.service';
 @Component({
   selector: 'app-horizontal-collapsable',
   templateUrl: './horizontal-collapsable.component.html',
-  styleUrls: ['./horizontal-collapsable.component.css']
+  styleUrls: ['./horizontal-collapsable.component.scss']
 })
 export class HorizontalCollapsableComponent implements OnInit, OnDestroy {
   kitConfig: any;
