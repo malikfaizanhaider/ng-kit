@@ -3,9 +3,18 @@
   <!-- Vertical Navigation Layout -->
   <ng-container *ngIf="layout === 'vertical'">
     <ng-container *ngFor="let item of navigation">
-      <app-vertical-group></app-vertical-group>
-      <app-vertical-collapsable></app-vertical-collapsable>
-      <app-vertical-item></app-vertical-item>
+      <app-vertical-group *ngIf="item.type=='group'" [item]="item"></app-vertical-group>
+      <app-vertical-collapsable *ngIf="item.type=='collapse'" [item]="item"></app-vertical-collapsable>
+      <app-vertical-item *ngIf="item.type=='item'" [item]="item"></app-vertical-item>
+    </ng-container>
+  </ng-container>
+
+  <!-- Horizontal Navigation Layout -->
+  <ng-container *ngIf="layout === 'horizontal'">
+    <ng-container *ngFor="let item of navigation">
+      <app-horizontal-collapsable *ngIf="item.type=='group'" [item]="item"></app-horizontal-collapsable>
+      <app-horizontal-collapsable *ngIf="item.type=='collapse'" [item]="item"></app-horizontal-collapsable>
+      <app-horizontal-item *ngIf="item.type=='item'" [item]="item"></app-horizontal-item>
     </ng-container>
   </ng-container>
 </div>

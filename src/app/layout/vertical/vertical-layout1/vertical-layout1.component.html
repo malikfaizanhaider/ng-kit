@@ -1,3 +1,105 @@
-<p>
-  vertical-layout1 works!
-</p>
+<ng-container *ngIf="!kitConfig.layout.sidepanel.hidden && kitConfig.layout.sidepanel.position === 'left'">
+  <app-sidebar></app-sidebar>
+</ng-container>
+
+<div id="main">
+  <!-- TOOLBAR: Above -->
+  <ng-container *ngIf="kitConfig.layout.toolbar.position === 'above'">
+    <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+  </ng-container>
+  <!-- / TOOLBAR: Above -->
+
+
+  <div id="container-1" class="container">
+    <!-- NAVBAR: Left -->
+    <ng-container *ngIf="kitConfig.layout.navbar.position === 'left'">
+      <ng-container *ngTemplateOutlet="leftNavbar"></ng-container>
+    </ng-container>
+    <!-- / NAVBAR: Left -->
+
+    <div id="container-2" class="container">
+      <!-- TOOLBAR: Below fixed -->
+      <ng-container *ngIf="kitConfig.layout.toolbar.position === 'below-fixed'">
+        <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+      </ng-container>
+      <!-- / TOOLBAR: Below fixed -->
+      <div id="container-3" class="container" appKitPerfectScroll>
+        <!-- TOOLBAR: Below static -->
+        <ng-container *ngIf="kitConfig.layout.toolbar.position === 'below-static'">
+          <ng-container *ngTemplateOutlet="toolbar"></ng-container>
+        </ng-container>
+        <!-- / TOOLBAR: Below static -->
+        <!-- CONTENT -->
+        <app-content></app-content>
+        <!-- / CONTENT -->
+
+        <!-- FOOTER: Below static -->
+        <ng-container *ngIf="kitConfig.layout.footer.position === 'below-static'">
+          <ng-container *ngTemplateOutlet="footer"></ng-container>
+        </ng-container>
+        <!-- / FOOTER: Below static -->
+      </div>
+
+      <!-- FOOTER: Below fixed -->
+      <ng-container *ngIf="kitConfig.layout.footer.position === 'below-fixed'">
+        <ng-container *ngTemplateOutlet="footer"></ng-container>
+      </ng-container>
+      <!-- / FOOTER: Below fixed -->
+    </div>
+
+    <!-- NAVBAR: Right -->
+    <ng-container *ngIf="kitConfig.layout.navbar.position === 'right'">
+      <ng-container *ngTemplateOutlet="rightNavbar"></ng-container>
+    </ng-container>
+    <!-- / NAVBAR: Right -->
+
+  </div>
+
+  <!-- FOOTER: Above -->
+  <ng-container *ngIf="kitConfig.layout.footer.position === 'above'">
+    <ng-container *ngTemplateOutlet="footer"></ng-container>
+  </ng-container>
+  <!-- FOOTER: Above -->
+
+</div>
+
+<ng-container *ngIf="!kitConfig.layout.sidepanel.hidden && kitConfig.layout.sidepanel.position === 'right'">
+  <app-sidebar></app-sidebar>
+</ng-container>
+
+<app-sidebar name="quickPanel" position="right" class="quick-panel">
+  <app-quick-panel> </app-quick-panel>
+</app-sidebar>
+
+<ng-template #toolbar>
+  <app-toolbar *ngIf="!kitConfig.layout.toolbar.hidden"
+                [ngClass]="[kitConfig.layout.toolbar.position, kitConfig.layout.toolbar.background]"></app-toolbar>
+</ng-template>
+
+<!-- FOOTER -->
+<ng-template #footer>
+  <footer *ngIf="!kitConfig.layout.footer.hidden"
+          [ngClass]="[kitConfig.layout.footer.position, kitConfig.layout.footer.background]"></footer>
+</ng-template>
+<!-- / FOOTER -->
+
+<!-- LEFT NAVBAR -->
+<ng-template #leftNavbar>
+  <app-sidebar name="navbar" class="navbar-fuse-sidebar" [folded]="kitConfig.layout.navbar.folded" lockedOpen="gt-md" *ngIf="!kitConfig.layout.navbar.hidden">
+    <app-navbar [variant]="kitConfig.layout.navbar.variant"
+            class="left-navbar" [ngClass]="kitConfig.layout.navbar.background"></app-navbar>
+  </app-sidebar>
+</ng-template>
+<!-- / LEFT NAVBAR -->
+
+<!-- RIGHT NAVBAR -->
+<ng-template #rightNavbar>
+  <app-sidebar name="navbar" position="right" class="navbar-fuse-sidebar"
+                [folded]="kitConfig.layout.navbar.folded"
+                lockedOpen="gt-md"
+                *ngIf="!kitConfig.layout.navbar.hidden">
+    <app-navbar [variant]="kitConfig.layout.navbar.variant"
+            class="right-navbar" [ngClass]="kitConfig.layout.navbar.background"></app-navbar>
+  </app-sidebar>
+</ng-template>
+<!-- / RIGHT NAVBAR -->

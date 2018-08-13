@@ -4,13 +4,15 @@ import { SharedModule } from '@kit/shared.module';
 import { ContentComponent } from './content.component';
 
 @NgModule({
+  declarations: [
+    ContentComponent
+  ],
   imports: [
     RouterModule,
     SharedModule
   ],
   exports: [
     ContentComponent
-  ],
-  declarations: [ContentComponent]
+  ]
 })
 export class ContentModule { }

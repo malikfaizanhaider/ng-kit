@@ -18,7 +18,6 @@ import { DirectivesModule } from './directives/directives';
     ReactiveFormsModule,
     FlexLayoutModule,
     DirectivesModule
-  ],
-  declarations: []
+  ]
 })
 export class SharedModule { }

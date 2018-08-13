@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { MatDividerModule, MatListModule, MatSlideToggleModule } from '@angular/material';
+import { SharedModule } from '@kit/shared.module';
+import { QuickPanelComponent } from './quick-panel.component';
 
 @NgModule({
-  imports: [
-    CommonModule
+  declarations: [
+    QuickPanelComponent
   ],
-  declarations: []
+  imports: [
+    MatDividerModule,
+    MatListModule,
+    MatSlideToggleModule,
+
+    SharedModule
+  ],
+  exports: [
+    QuickPanelComponent
+  ]
 })
 export class QuickPanelModule { }

@@ -8,6 +8,7 @@ import * as _ from 'lodash';
 
 import { ConfigService } from '@kit/services/config.service';
 
+
 @Directive({
   selector: '[appKitPerfectScroll]'
 })
@@ -41,12 +42,12 @@ export class KitPerfectScrollDirective implements AfterViewInit, OnDestroy {
     this._unsubscribeAll = new Subject();
   }
 
-  set kitPerfectScrollbarOptions(value) {
+  set appKitPerfectScrollbarOptions(value) {
     // Merge the options
     this._options = _.merge({}, this._options, value);
   }
 
-  get kitPerfectScrollbarOptions(): any {
+  get appKitPerfectScrollbarOptions(): any {
     // Return the options
     return this._options;
   }
@@ -93,7 +94,7 @@ export class KitPerfectScrollDirective implements AfterViewInit, OnDestroy {
       );
 
     // Scroll to the top on every route change
-    if ( this.kitPerfectScrollbarOptions.updateOnRouteChange ) {
+    if ( this.appKitPerfectScrollbarOptions.updateOnRouteChange ) {
       this._router.events
         .pipe(
           takeUntil(this._unsubscribeAll),
@@ -137,7 +138,7 @@ export class KitPerfectScrollDirective implements AfterViewInit, OnDestroy {
 
     // Initialize the perfect-scrollbar
     this.ps = new PerfectScrollbar(this.elementRef.nativeElement, {
-      ...this.kitPerfectScrollbarOptions
+      ...this.appKitPerfectScrollbarOptions
     });
   }
 

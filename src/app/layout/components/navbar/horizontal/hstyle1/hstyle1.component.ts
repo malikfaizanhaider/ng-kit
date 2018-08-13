@@ -7,7 +7,7 @@ import { SidebarService} from '@kit/components/sidebar/sidebar.service';
 @Component({
   selector: 'app-hstyle1',
   templateUrl: './hstyle1.component.html',
-  styleUrls: ['./hstyle1.component.css'],
+  styleUrls: ['./hstyle1.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class Hstyle1Component implements OnInit, OnDestroy {
