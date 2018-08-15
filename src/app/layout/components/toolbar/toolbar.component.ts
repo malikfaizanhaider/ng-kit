@@ -12,7 +12,7 @@ import { navigation } from '../../../navigation/navigation';
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.css']
+  styleUrls: ['./toolbar.component.scss']
 })
 export class ToolbarComponent implements OnInit, OnDestroy {
 
@@ -35,7 +35,8 @@ export class ToolbarComponent implements OnInit, OnDestroy {
    */
   constructor(
     private  _configService: ConfigService,
-    private _sidebarService: SidebarService
+    private _sidebarService: SidebarService,
+    private _translateService: TranslateService
   ) {
     // Set the defaults
     this.userStatusOptions = [
@@ -73,9 +74,9 @@ export class ToolbarComponent implements OnInit, OnDestroy {
         flag : 'us'
       },
       {
-        id   : 'tr',
-        title: 'Turkish',
-        flag : 'tr'
+        id   : 'urd',
+        title: 'Urdu',
+        flag : 'uae'
       }
     ];
 
@@ -93,14 +94,17 @@ export class ToolbarComponent implements OnInit, OnDestroy {
    * On init
    */
   ngOnInit(): void {
+    // Subscribe to the config changes
     this._configService.config
       .pipe(takeUntil(this._unsubscribeAll))
       .subscribe((settings) => {
         this.horizontalNavbar = settings.layout.navbar.position === 'top';
         this.rightNavbar = settings.layout.navbar.position === 'right';
-        this.hiddenNavbar = settings.layout.navabr.hidden === true;
+        this.hiddenNavbar = settings.layout.navbar.hidden === true;
       });
+
     // Set the selected language from default languages
+    this.selectedLanguage = _.find(this.languages, {'id': this._translateService.currentLang});
   }
 
   /**
@@ -133,5 +137,13 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   search(value): void {
     // Do your search here...
     console.log(value);
+  }
+
+  setLanguage(lang): void {
+    // Set the selected language for the toolbar
+    this.selectedLanguage = lang;
+
+    // Use the selected language for translations
+    this._translateService.use(lang.id);
   }
 }

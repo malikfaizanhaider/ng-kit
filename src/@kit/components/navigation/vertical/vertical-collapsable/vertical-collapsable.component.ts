@@ -4,11 +4,13 @@ import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 import { KitNavigationItem } from '@kit/types';
 import { NavigationService } from '@kit/components/navigation/navigation.service';
+import { kitAnimations } from '@kit/animations';
 
 @Component({
   selector: 'app-vertical-collapsable',
   templateUrl: './vertical-collapsable.component.html',
-  styleUrls: ['./vertical-collapsable.component.scss']
+  styleUrls: ['./vertical-collapsable.component.scss'],
+  animations : kitAnimations
 })
 export class VerticalCollapsableComponent implements OnInit, OnDestroy{
   @Input()

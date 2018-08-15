@@ -1,3 +1,34 @@
 <ng-container *ngIf="kitConfig.layout.style === 'app-vertical-layout1'">
   <app-vertical-layout1></app-vertical-layout1>
 </ng-container>
+
+<!-- VERTICAL LAYOUT 2 -->
+<ng-container *ngIf="kitConfig.layout.style === 'app-vertical-layout2'">
+  <app-vertical-layout2></app-vertical-layout2>
+</ng-container>
+<!-- / VERTICAL LAYOUT 2 -->
+
+<!-- VERTICAL LAYOUT 2 -->
+<ng-container *ngIf="kitConfig.layout.style === 'app-vertical-layout3'">
+  <app-vertical-layout3></app-vertical-layout3>
+</ng-container>
+<!-- / VERTICAL LAYOUT 2 -->
+
+<!-- HORIZONTAL LAYOUT 1 -->
+<ng-container *ngIf="kitConfig.layout.style === 'app-horizontel-layout1'">
+  <app-horizontel-layout1></app-horizontel-layout1>
+</ng-container>
+<!-- / HORIZONTAL LAYOUT 1 -->
+
+<!-- THEME OPTIONS PANEL -->
+<button mat-icon-button class="mat-primary-bg mat-elevation-z2 theme-options-button"
+        [ngClass]="{'right-side-panel': kitConfig.layout.sidepanel.position === 'right',
+                    'side-panel-hidden': kitConfig.layout.sidepanel.hidden === true}"
+        (click)="toggleSidebarOpen('themeOptionsPanel')">
+  <mat-icon>settings</mat-icon>
+</button>
+
+<app-sidebar name="themeOptionsPanel" class="theme-options-sidebar" position="right" [invisibleOverlay]="true">
+  <kit-theme-options></kit-theme-options>
+</app-sidebar>
+<!-- / THEME OPTIONS PANEL -->

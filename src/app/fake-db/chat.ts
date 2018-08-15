@@ -175,7 +175,7 @@ export class ChatFakeDb
         {
             'id'    : '5725a6809413bf8a0a5272b1',
             'name'  : 'Velazquez',
-            'avatar': 'assets/images/avatars/Velazquez.jpg',
+            'avatar': 'assets/images/avatars/fhaider.jpg',
             'status': 'online',
             'mood'  : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit...'
         }
