@@ -3,7 +3,8 @@ import { Component, ElementRef, Input, Renderer2, ViewEncapsulation } from '@ang
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrls: ['./navbar.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NavbarComponent {
   // Private
