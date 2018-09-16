@@ -6,7 +6,7 @@ import { navigation } from 'app/navigation/navigation';
 @Component({
   selector: 'app-horizontel-layout1',
   templateUrl: './horizontel-layout1.component.html',
-  styleUrls: ['./horizontel-layout1.component.css'],
+  styleUrls: ['./horizontel-layout1.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 

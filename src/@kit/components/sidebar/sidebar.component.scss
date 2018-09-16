@@ -55,7 +55,7 @@ app-sidebar {
  }
 }
 
-.fuse-sidebar-overlay {
+.kit-sidebar-overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -65,7 +65,7 @@ app-sidebar {
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
 
-&.fuse-sidebar-overlay-invisible {
+&.kit-sidebar-overlay-invisible {
    background-color: transparent;
  }
 }

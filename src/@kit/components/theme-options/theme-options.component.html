@@ -19,19 +19,19 @@
 
       <mat-radio-group fxLayout="column" fxLayoutAlign="start start" formControlName="style">
 
-        <mat-radio-button class="mb-12" value="vertical-layout-1">
+        <mat-radio-button class="mb-12" value="app-vertical-layout1">
           Vertical Layout #1
         </mat-radio-button>
 
-        <mat-radio-button class="mb-12" value="vertical-layout-2">
+        <mat-radio-button class="mb-12" value="app-vertical-layout2">
           Vertical Layout #2
         </mat-radio-button>
 
-        <mat-radio-button class="mb-12" value="vertical-layout-3">
+        <mat-radio-button class="mb-12" value="app-vertical-layout3">
           Vertical Layout #3
         </mat-radio-button>
 
-        <mat-radio-button class="mb-12" value="horizontal-layout-1">
+        <mat-radio-button class="mb-12" value="app-horizontel-layout1">
           Horizontal Layout #1
         </mat-radio-button>
 
@@ -41,7 +41,7 @@
       <ng-container [ngSwitch]="kitConfig.layout.style">
 
         <!-- VERTICAL LAYOUT #1 -->
-        <ng-container *ngSwitchCase="'vertical-layout-1'">
+        <ng-container *ngSwitchCase="'app-vertical-layout1'">
 
           <!-- LAYOUT WIDTH -->
           <div class="group mt-32">
@@ -152,7 +152,7 @@
         </ng-container>
 
         <!-- VERTICAL LAYOUT #2 -->
-        <ng-container *ngSwitchCase="'vertical-layout-2'">
+        <ng-container *ngSwitchCase="'app-vertical-layout2'">
 
           <!-- LAYOUT WIDTH -->
           <div class="group mt-32">
@@ -263,7 +263,7 @@
         </ng-container>
 
         <!-- VERTICAL LAYOUT #3 -->
-        <ng-container *ngSwitchCase="'vertical-layout-3'">
+        <ng-container *ngSwitchCase="'app-vertical-layout3'">
 
           <!-- LAYOUT WIDTH -->
           <div class="group mt-32">
@@ -372,7 +372,7 @@
         </ng-container>
 
         <!-- HORIZONTAL LAYOUT #1 -->
-        <ng-container *ngSwitchCase="'horizontal-layout-1'">
+        <ng-container *ngSwitchCase="'app-horizontel-layout1'">
 
           <!-- LAYOUT WIDTH -->
           <div class="group mt-32">
