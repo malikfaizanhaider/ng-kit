@@ -10,7 +10,7 @@ import { SidebarService } from '@kit/components/sidebar/sidebar.service';
 @Component({
   selector: 'app-vstyle2',
   templateUrl: './vstyle2.component.html',
-  styleUrls: ['./vstyle2.component.css'],
+  styleUrls: ['./vstyle2.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class Vstyle2Component implements OnInit, OnDestroy {

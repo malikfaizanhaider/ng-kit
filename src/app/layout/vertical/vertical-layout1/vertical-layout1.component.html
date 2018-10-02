@@ -85,7 +85,7 @@
 
 <!-- LEFT NAVBAR -->
 <ng-template #leftNavbar>
-  <app-sidebar name="navbar" class="navbar-fuse-sidebar" [folded]="kitConfig.layout.navbar.folded" lockedOpen="gt-md" *ngIf="!kitConfig.layout.navbar.hidden">
+  <app-sidebar name="navbar" class="navbar-kit-sidebar" [folded]="kitConfig.layout.navbar.folded" lockedOpen="gt-md" *ngIf="!kitConfig.layout.navbar.hidden">
     <app-navbar [variant]="kitConfig.layout.navbar.variant"
             class="left-navbar" [ngClass]="kitConfig.layout.navbar.background"></app-navbar>
   </app-sidebar>
@@ -94,7 +94,7 @@
 
 <!-- RIGHT NAVBAR -->
 <ng-template #rightNavbar>
-  <app-sidebar name="navbar" position="right" class="navbar-fuse-sidebar"
+  <app-sidebar name="navbar" position="right" class="navbar-kit-sidebar"
                 [folded]="kitConfig.layout.navbar.folded"
                 lockedOpen="gt-md"
                 *ngIf="!kitConfig.layout.navbar.hidden">
