@@ -1,30 +1,35 @@
 import {KitConfig} from '@kit/types';
 
 export const kitConfig: KitConfig = {
-    layout          : {
-        style         : 'app-vertical-layout1',
-        width         : 'fullwidth',
-        navbar        : {
-          background: 'mat-fuse-dark-700-bg',
-          folded    : false,
-          hidden    : false,
-          position  : 'left',
-          variant   : 'vertical-style-1'
-        },
-        toolbar       : {
-          background: 'mat-white-500-bg',
-          hidden    : false,
-          position  : 'below-static'
-        },
-        footer        : {
-          background: 'mat-fuse-dark-900-bg',
-          hidden    : false,
-          position  : 'below-fixed'
-        },
-        sidepanel: {
-          hidden  : false,
-          position: 'right'
-        }
+  // Color themes can be defined in src/app/app.theme.scss
+  colorTheme      : 'theme-default',
+  customScrollbars: true,
+  layout          : {
+    style    : 'app-vertical-layout1',
+    width    : 'fullwidth',
+    navbar   : {
+      primaryBackground  : 'fuse-navy-700',
+      secondaryBackground: 'fuse-navy-900',
+      folded             : false,
+      hidden             : false,
+      position           : 'left',
+      variant            : 'vertical-style-1'
     },
-    customScrollbars: true
+    toolbar  : {
+      customBackgroundColor: false,
+      background           : 'fuse-white-500',
+      hidden               : false,
+      position             : 'below-static'
+    },
+    footer   : {
+      customBackgroundColor: true,
+      background           : 'fuse-navy-900',
+      hidden               : false,
+      position             : 'below-fixed'
+    },
+    sidepanel: {
+      hidden  : false,
+      position: 'right'
+    }
+  }
 };

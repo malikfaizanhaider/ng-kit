@@ -78,14 +78,14 @@
 <!-- TOOLBAR -->
 <ng-template #toolbar>
   <app-toolbar *ngIf="!kitConfig.layout.toolbar.hidden"
-           [ngClass]="[kitConfig.layout.toolbar.position, kitConfig.layout.toolbar.background]"></app-toolbar>
+               [ngClass]="kitConfig.layout.toolbar.customBackgroundColor === true ? kitConfig.layout.toolbar.position + ' ' + kitConfig.layout.toolbar.background : kitConfig.layout.toolbar.position"></app-toolbar>
 </ng-template>
 <!-- / TOOLBAR -->
 
 <!-- FOOTER -->
 <ng-template #footer>
   <footer *ngIf="!kitConfig.layout.footer.hidden"
-          [ngClass]="[kitConfig.layout.footer.position, kitConfig.layout.footer.background]"></footer>
+          [ngClass]="kitConfig.layout.footer.customBackgroundColor === true ? kitConfig.layout.footer.position + ' ' + kitConfig.layout.footer.background : kitConfig.layout.footer.position"></footer>
 </ng-template>
 <!-- / FOOTER -->
 
@@ -104,8 +104,9 @@
   <app-sidebar name="navbar" class="navbar-kit-sidebar"
                 [folded]="kitConfig.layout.navbar.folded"
                 *ngIf="!kitConfig.layout.navbar.hidden">
-    <app-navbar  [variant]="kitConfig.layout.navbar.variant"
-            class="left-navbar" [ngClass]="kitConfig.layout.navbar.background"></app-navbar>
+    <app-navbar
+      [variant]="kitConfig.layout.navbar.variant"
+      class="left-navbar"></app-navbar>
   </app-sidebar>
 </ng-template>
 <!-- / LEFT NAVBAR -->

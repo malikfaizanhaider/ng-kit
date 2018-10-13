@@ -1,4 +1,4 @@
-// This file meant to be imported only once! Use kit.scss to access
+// This file meant to be imported only once! Use fuse.scss to access
 // to the core Fuse and Angular Material mixins
 
 // ngx-datatable
@@ -10,14 +10,11 @@
 // Fuse
 @import "kit";
 
+// Theme
+@import "theme";
+
 // Include core Angular Material styles
 @include mat-core();
-
-// Setup the typography
-@include angular-material-typography($typography);
-
-// Create an Angular Material theme from the $theme map
-@include angular-material-theme($theme);
 
 // Partials
 @import "partials/reset";

@@ -11,7 +11,19 @@
   </div>
 
   <form [formGroup]="form">
+    <!-- COLOR THEME -->
+    <div class="group">
 
+      <h2>Color themes</h2>
+
+      <mat-radio-group fxLayout="column" fxLayoutAlign="start start" formControlName="colorTheme">
+        <mat-radio-button class="mb-12" value="theme-default">Default Light</mat-radio-button>
+        <mat-radio-button class="mb-12" value="theme-yellow-light">Yellow Light</mat-radio-button>
+        <mat-radio-button class="mb-12" value="theme-blue-gray-dark">Blue-Gray Dark</mat-radio-button>
+        <mat-radio-button class="mb-12" value="theme-pink-dark">Pink Dark</mat-radio-button>
+      </mat-radio-group>
+
+    </div>
     <!-- LAYOUT STYLES -->
     <div class="group" formGroupName="layout">
 
@@ -79,10 +91,11 @@
               <mat-radio-button class="mb-16" value="vertical-style-2">Style 2</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.navbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Primary background:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="primaryBackground"></kit-material-color-picker>
+
+            <h3 class="mt-24 mb-8">Secondary background:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="secondaryBackground"></kit-material-color-picker>
 
           </div>
 
@@ -102,10 +115,8 @@
               <mat-radio-button class="mb-12" value="below-fixed">Below Fixed</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.toolbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Background color:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="background"></kit-material-color-picker>
 
           </div>
 
@@ -126,8 +137,7 @@
             </mat-radio-group>
 
             <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.footer.background">
+            <kit-material-color-picker class="mb-16" formControlName="background">
             </kit-material-color-picker>
 
           </div>
@@ -190,10 +200,11 @@
               <mat-radio-button class="mb-16" value="vertical-style-2">Style 2</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.navbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Primary Background</h3>
+            <kit-material-color-picker class="mb-16" formControlName="primaryBackground"></kit-material-color-picker>
+
+            <h3 class="mt-24 mb-8">Secondary Background</h3>
+            <kit-material-color-picker class="mb-16" formControlName="secondaryBackground"></kit-material-color-picker>
 
           </div>
 
@@ -213,9 +224,9 @@
               <mat-radio-button class="mb-12" value="below">Below</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
+            <h3 class="mt-24 mb-8">Background color:</h3>
             <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.toolbar.background">
+                                       formControlName="background">
             </kit-material-color-picker>
 
           </div>
@@ -236,10 +247,8 @@
               <mat-radio-button class="mb-12" value="below">Below</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.footer.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Background Color:</h3>
+            <kit-material-color-picker class="mb-16"  formControlName="background"></kit-material-color-picker>
 
           </div>
 
@@ -301,11 +310,11 @@
               <mat-radio-button class="mb-16" value="vertical-style-2">Style 2</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.navbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Primary Background:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="primaryBackground"></kit-material-color-picker>
 
+            <h3 class="mt-24 mb-8">Secondary Background:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="secondaryBackground"></kit-material-color-picker>
           </div>
 
           <!-- TOOLBAR -->
@@ -323,10 +332,8 @@
               <mat-radio-button class="mb-12" value="above-fixed">Above Fixed</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.toolbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Background Color:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="background"> </kit-material-color-picker>
 
           </div>
 
@@ -345,10 +352,8 @@
               <mat-radio-button class="mb-12" value="above-fixed">Above Fixed</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.footer.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Background Color:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="background"></kit-material-color-picker>
 
           </div>
 
@@ -405,11 +410,11 @@
               <mat-radio-button class="mb-16" value="vertical-style-2">Style 2</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.navbar.background">
-            </kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Primary Background:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="primaryBackground"></kit-material-color-picker>
 
+            <h3 class="mt-24 mb-8">Secondary background (Vertical):</h3>
+            <kit-material-color-picker class="mb-16" formControlName="secondaryBackground"></kit-material-color-picker>
           </div>
 
           <!-- TOOLBAR -->
@@ -427,8 +432,8 @@
               <mat-radio-button class="mb-12" value="below">Below</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16" [(selectedClass)]="kitConfig.layout.toolbar.background"></kit-material-color-picker>
+            <h3 class="mt-24 mb-8">Background color:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="background"></kit-material-color-picker>
 
           </div>
 
@@ -447,9 +452,8 @@
               <mat-radio-button class="mb-12" value="above-static">Above Static</mat-radio-button>
             </mat-radio-group>
 
-            <h3 class="mt-24 mb-8">Color:</h3>
-            <kit-material-color-picker class="mb-16"
-                                        [(selectedClass)]="kitConfig.layout.footer.background">
+            <h3 class="mt-24 mb-8">Background color:</h3>
+            <kit-material-color-picker class="mb-16" formControlName="background">
             </kit-material-color-picker>
 
           </div>

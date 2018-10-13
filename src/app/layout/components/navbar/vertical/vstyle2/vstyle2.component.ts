@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import { filter, take, takeUntil } from 'rxjs/operators';
+import {delay, filter, take, takeUntil} from 'rxjs/operators';
 
 import { NavigationService } from '@kit/components/navigation/navigation.service';
 import { KitPerfectScrollDirective } from '@kit/directives/kit-perfect-scroll/kit-perfect-scroll.directive';
@@ -14,8 +14,7 @@ import { SidebarService } from '@kit/components/sidebar/sidebar.service';
   encapsulation: ViewEncapsulation.None
 })
 export class Vstyle2Component implements OnInit, OnDestroy {
-
-  kitPerfectScrollbarUpdateTimeout: any;
+  kitConfig: any;
   navigation: any;
 
   // Private
@@ -53,11 +52,12 @@ export class Vstyle2Component implements OnInit, OnDestroy {
 
     // Update the scrollbar on collapsable item toggle
     this._navigationService.onItemCollapseToggled
-      .pipe(takeUntil(this._unsubscribeAll))
+      .pipe(
+        delay(500),
+        takeUntil(this._unsubscribeAll)
+      )
       .subscribe(() => {
-        this.kitPerfectScrollbarUpdateTimeout = setTimeout(() => {
-          this._kitPerfectScrollbar.update();
-        }, 310);
+        this._kitPerfectScrollbar.update();
       });
 
     // Scroll to the active item position
@@ -110,10 +110,6 @@ export class Vstyle2Component implements OnInit, OnDestroy {
    * On destroy
    */
   ngOnDestroy(): void {
-    if ( this.kitPerfectScrollbarUpdateTimeout ) {
-      clearTimeout(this.kitPerfectScrollbarUpdateTimeout);
-    }
-
     // Unsubscribe from all subscriptions
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();

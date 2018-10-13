@@ -1,4 +1,4 @@
-<div class="navbar-header">
+<div class="navbar-header" [ngClass]="kitConfig.layout.navbar.secondaryBackground">
 
   <div class="logo">
     <img class="logo-icon" src="assets/images/logos/angular.svg">
@@ -17,6 +17,6 @@
 
 </div>
 
-<div class="navbar-content" appKitPerfectScroll>
+<div class="navbar-content" appKitPerfectScroll [ngClass]="kitConfig.layout.navbar.primaryBackground">
   <app-navigation layout="vertical"></app-navigation>
 </div>
