@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subject } from 'rxjs';
-import {delay, filter, take, takeUntil} from 'rxjs/operators';
+import { delay, filter, take, takeUntil } from 'rxjs/operators';
 
+import { ConfigService } from '@kit/services/config.service';
 import { NavigationService } from '@kit/components/navigation/navigation.service';
 import { KitPerfectScrollDirective } from '@kit/directives/kit-perfect-scroll/kit-perfect-scroll.directive';
 import { SidebarService } from '@kit/components/sidebar/sidebar.service';
@@ -24,11 +25,13 @@ export class Vstyle2Component implements OnInit, OnDestroy {
   /**
    * Constructor
    *
+   * @param _configService
    * @param {NavigationService} _navigationService
    * @param {SidebarService} _sidebarService
    * @param {Router} _router
    */
   constructor(
+    private _configService: ConfigService,
     private _navigationService: NavigationService,
     private _sidebarService: SidebarService,
     private _router: Router
@@ -73,8 +76,8 @@ export class Vstyle2Component implements OnInit, OnDestroy {
 
             if ( activeNavItem ) {
               const activeItemOffsetTop       = activeNavItem.offsetTop,
-                activeItemOffsetParentTop = activeNavItem.offsetParent.offsetTop,
-                scrollDistance            = activeItemOffsetTop - activeItemOffsetParentTop - (48 * 3);
+                    activeItemOffsetParentTop = activeNavItem.offsetParent.offsetTop,
+                    scrollDistance            = activeItemOffsetTop - activeItemOffsetParentTop - (48 * 3);
 
               this._kitPerfectScrollbar.scrollToTop(scrollDistance);
             }
@@ -82,6 +85,14 @@ export class Vstyle2Component implements OnInit, OnDestroy {
         }
       );
   }
+
+  // -----------------------------------------------------------------------------------------------------
+  // @ Lifecycle hooks
+  // -----------------------------------------------------------------------------------------------------
+
+  /**
+   * On init
+   */
   ngOnInit(): void {
     this._router.events
       .pipe(
@@ -104,6 +115,14 @@ export class Vstyle2Component implements OnInit, OnDestroy {
       .subscribe(() => {
         this.navigation = this._navigationService.getCurrentNavigation();
       });
+
+    // Subscribe to the config changes
+    this._configService.config
+      .pipe(takeUntil(this._unsubscribeAll))
+      .subscribe((config) => {
+        this.kitConfig = config;
+      });
+
   }
 
   /**

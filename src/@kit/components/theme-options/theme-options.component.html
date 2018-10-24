@@ -13,16 +13,15 @@
   <form [formGroup]="form">
     <!-- COLOR THEME -->
     <div class="group">
-
       <h2>Color themes</h2>
-
-      <mat-radio-group fxLayout="column" fxLayoutAlign="start start" formControlName="colorTheme">
-        <mat-radio-button class="mb-12" value="theme-default">Default Light</mat-radio-button>
-        <mat-radio-button class="mb-12" value="theme-yellow-light">Yellow Light</mat-radio-button>
-        <mat-radio-button class="mb-12" value="theme-blue-gray-dark">Blue-Gray Dark</mat-radio-button>
-        <mat-radio-button class="mb-12" value="theme-pink-dark">Pink Dark</mat-radio-button>
-      </mat-radio-group>
-
+      <mat-form-field>
+        <mat-select [(value)]="colorTheme" formControlName="colorTheme">
+          <mat-option value="theme-default">Default Light</mat-option>
+          <mat-option value="theme-yellow-light">Yellow Light</mat-option>
+          <mat-option value="theme-blue-gray-dark">Blue-Gray Dark</mat-option>
+          <mat-option value="theme-pink-dark">Pink Dark</mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
     <!-- LAYOUT STYLES -->
     <div class="group" formGroupName="layout">
