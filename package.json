@@ -54,7 +54,7 @@
     "ng2-charts": "^1.6.0",
     "ngrx-store-freeze": "^0.2.4",
     "ngx-color-picker": "^6.7.0",
-    "ngx-cookie-service": "^1.0.10",
+    "ngx-cookie-service": "^2.3.0",
     "ngx-toastr": "^8.10.2",
     "perfect-scrollbar": "^1.4.0",
     "prismjs": "^1.15.0",
