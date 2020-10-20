@@ -909,7 +909,7 @@ async@1.x, async@^1.4.0, async@^1.5.2:
 
 async@2.1.2:
   version "2.1.2"
-  resolved "http://registry.npmjs.org/async/-/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
+  resolved "https://registry.npmjs.org/async/-/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
   dependencies:
     lodash "^4.14.0"
 
@@ -1660,7 +1660,7 @@ commander@2, commander@2.16.x, commander@^2.12.1, commander@~2.16.0:
 
 commander@2.9.0:
   version "2.9.0"
-  resolved "http://registry.npmjs.org/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
+  resolved "https://registry.npmjs.org/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
 
@@ -3245,7 +3245,7 @@ getpass@^0.1.1:
 
 gh-pages@0.12.0:
   version "0.12.0"
-  resolved "http://registry.npmjs.org/gh-pages/-/gh-pages-0.12.0.tgz#d951e3ed98b85699d4b0418eb1a15b1a04988dc1"
+  resolved "https://registry.npmjs.org/gh-pages/-/gh-pages-0.12.0.tgz#d951e3ed98b85699d4b0418eb1a15b1a04988dc1"
   dependencies:
     async "2.1.2"
     commander "2.9.0"
@@ -4434,7 +4434,7 @@ load-json-file@^1.0.0:
 
 load-json-file@^2.0.0:
   version "2.0.0"
-  resolved "http://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
+  resolved "https://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
   dependencies:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
@@ -6408,12 +6408,8 @@ sockjs@0.3.19:
     uuid "^3.0.1"
 
 source-list-map@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.0.tgz#aaa47403f7b245a92fbc97ea08f250d6087ed085"
-
-source-list-map@~0.1.7:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-0.1.8.tgz#c550b2ab5427f6b3f21f5afead88c4f5587b2106"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz#3993bd873bfc48479cca9ea3a547835c7c154b34"
 
 source-map-resolve@^0.5.0:
   version "0.5.2"
@@ -6456,7 +6452,7 @@ source-map@0.7.3:
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.7.3.tgz#5302f8169031735226544092e64981f751750383"
 
-source-map@^0.4.2, source-map@^0.4.4, source-map@~0.4.1:
+source-map@^0.4.2, source-map@^0.4.4:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
@@ -6778,7 +6774,7 @@ through2@^2.0.0:
 
 through@X.X.X, through@^2.3.6:
   version "2.3.8"
-  resolved "http://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  resolved "https://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 thunky@^1.0.2:
   version "1.0.2"
@@ -7233,13 +7229,6 @@ webdriver-manager@^12.0.6:
     semver "^5.3.0"
     xml2js "^0.4.17"
 
-webpack-core@^0.6.8:
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/webpack-core/-/webpack-core-0.6.9.tgz#fc571588c8558da77be9efb6debdc5a3b172bdc2"
-  dependencies:
-    source-list-map "~0.1.7"
-    source-map "~0.4.1"
-
 webpack-dev-middleware@3.1.3, webpack-dev-middleware@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/webpack-dev-middleware/-/webpack-dev-middleware-3.1.3.tgz#8b32aa43da9ae79368c1bf1183f2b6cf5e1f39ed"
@@ -7300,18 +7289,18 @@ webpack-merge@^4.1.2:
   dependencies:
     lodash "^4.17.5"
 
-webpack-sources@^1.0.1, webpack-sources@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"
+webpack-sources@^1.0.1, webpack-sources@^1.1.0, webpack-sources@^1.3.0:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-1.4.3.tgz#eedd8ec0b928fbf1cbfe994e22d2d890f330a933"
   dependencies:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
 webpack-subresource-integrity@^1.1.0-rc.4:
-  version "1.1.0-rc.4"
-  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.1.0-rc.4.tgz#c5c4e3d690f9d2f64a9550e07a8767f9796aa5d8"
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/webpack-subresource-integrity/-/webpack-subresource-integrity-1.5.1.tgz#6f44ea99987266b70c4ec42ac51064d33e982277"
   dependencies:
-    webpack-core "^0.6.8"
+    webpack-sources "^1.3.0"
 
 webpack@~4.8.1:
   version "4.8.3"
