@@ -42,7 +42,7 @@
     "angular-calendar": "^0.25.2",
     "angular-in-memory-web-api": "^0.6.1",
     "angular5-toaster": "^1.0.2",
-    "chart.js": "^2.7.3",
+    "chart.js": "^3.1.0",
     "classlist": "^2.0.0",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
