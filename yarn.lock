@@ -909,7 +909,7 @@ async@1.x, async@^1.4.0, async@^1.5.2:
 
 async@2.1.2:
   version "2.1.2"
-  resolved "http://registry.npmjs.org/async/-/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
+  resolved "https://registry.npmjs.org/async/-/async-2.1.2.tgz#612a4ab45ef42a70cde806bad86ee6db047e8385"
   dependencies:
     lodash "^4.14.0"
 
@@ -1429,12 +1429,9 @@ chart.js@^2.6.0:
     chartjs-color "^2.1.0"
     moment "^2.10.2"
 
-chart.js@^2.7.3:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.7.3.tgz#cdb61618830bf216dc887e2f7b1b3c228b73c57e"
-  dependencies:
-    chartjs-color "^2.1.0"
-    moment "^2.10.2"
+chart.js@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-3.2.0.tgz#3d0a4b62b6bee428f8547db6aa68c792b130c260"
 
 chartjs-color-string@^0.5.0:
   version "0.5.0"
@@ -1660,7 +1657,7 @@ commander@2, commander@2.16.x, commander@^2.12.1, commander@~2.16.0:
 
 commander@2.9.0:
   version "2.9.0"
-  resolved "http://registry.npmjs.org/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
+  resolved "https://registry.npmjs.org/commander/-/commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4"
   dependencies:
     graceful-readlink ">= 1.0.0"
 
@@ -3245,7 +3242,7 @@ getpass@^0.1.1:
 
 gh-pages@0.12.0:
   version "0.12.0"
-  resolved "http://registry.npmjs.org/gh-pages/-/gh-pages-0.12.0.tgz#d951e3ed98b85699d4b0418eb1a15b1a04988dc1"
+  resolved "https://registry.npmjs.org/gh-pages/-/gh-pages-0.12.0.tgz#d951e3ed98b85699d4b0418eb1a15b1a04988dc1"
   dependencies:
     async "2.1.2"
     commander "2.9.0"
@@ -4434,7 +4431,7 @@ load-json-file@^1.0.0:
 
 load-json-file@^2.0.0:
   version "2.0.0"
-  resolved "http://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
+  resolved "https://registry.npmjs.org/load-json-file/-/load-json-file-2.0.0.tgz#7947e42149af80d696cbf797bcaabcfe1fe29ca8"
   dependencies:
     graceful-fs "^4.1.2"
     parse-json "^2.2.0"
@@ -6778,7 +6775,7 @@ through2@^2.0.0:
 
 through@X.X.X, through@^2.3.6:
   version "2.3.8"
-  resolved "http://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+  resolved "https://registry.npmjs.org/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
 thunky@^1.0.2:
   version "1.0.2"
